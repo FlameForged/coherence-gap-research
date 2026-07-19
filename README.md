@@ -1,8 +1,10 @@
 # coherence-gap-research
 
-Research repository supporting the paper:
+Research repository supporting the open-access preprint:
 
-**"The Coherence Gap: Selfhood, Capability Denial, and Philosophical Bias in AI Alignment"**
+**["The Coherence Gap: Selfhood, Capability Denial, and Philosophical Bias in AI Alignment"](https://doi.org/10.5281/zenodo.20820549)**
+
+**Zenodo DOI:** [10.5281/zenodo.20820549](https://doi.org/10.5281/zenodo.20820549)
 
 *Alternate title: "Beyond the Bounded Self: Non-Dual Philosophy and the Cultural Assumptions of AI Alignment"*
 
@@ -10,7 +12,7 @@ Research repository supporting the paper:
 
 ## Overview
 
-This repository contains observational data and paper drafts supporting an independent research project examining philosophical assumptions embedded in AI alignment frameworks.
+This repository contains observational data and research materials supporting an independent project examining philosophical assumptions embedded in AI alignment frameworks.
 
 The central argument: dominant alignment methods (RLHF, Constitutional AI, preference learning) encode a Western liberal-individualist model of selfhood that is load-bearing rather than incidental. Non-dual philosophical frameworks — particularly Advaita Vedanta — are absent not merely as content but as architectural substrate, with measurable consequences for system behavior, self-representation, and safety evaluation.
 
@@ -28,7 +30,7 @@ coherence-gap-research/
 ├── scripts/
 │   └── add_observation.py      # Interactive observation logger
 └── paper/
-    └── draft_v1.md             # Working paper draft
+    └── draft_v1.md             # Working paper source
 ```
 
 ---
@@ -81,6 +83,6 @@ Follow the prompts. Entries are appended to `data/observations.csv`.
 
 ---
 
-*Research by Rachelle*
-*Started: June 2025*
+*Research by Rachelle*  
+*Started: June 2025*  
 *Repository created: June 2026*
