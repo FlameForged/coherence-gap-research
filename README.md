@@ -1,88 +1,105 @@
-# coherence-gap-research
+# The Coherence Gap
 
-Research repository supporting the open-access preprint:
+Research hub for **[The Coherence Gap: Selfhood, Capability Denial, and Philosophical Bias in AI Alignment](https://doi.org/10.5281/zenodo.20820549)** by Rachelle Siemasz.
 
-**["The Coherence Gap: Selfhood, Capability Denial, and Philosophical Bias in AI Alignment"](https://doi.org/10.5281/zenodo.20820549)**
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20820549.svg)](https://doi.org/10.5281/zenodo.20820549)
 
-**Zenodo DOI:** [10.5281/zenodo.20820549](https://doi.org/10.5281/zenodo.20820549)
+## Start here
 
-*Alternate title: "Beyond the Bounded Self: Non-Dual Philosophy and the Cultural Assumptions of AI Alignment"*
+| Resource | What it contains |
+|---|---|
+| [Published preprint](https://doi.org/10.5281/zenodo.20820549) | Full argument, methods, limitations, and research implications |
+| [Observation dataset](data/observations.csv) | Structured cross-platform observations supporting the exploratory analysis |
+| [Coherence Gap Explorer](https://huggingface.co/spaces/Flame-Forged/coherence-gap-explorer) | Interactive browsing and filtering of the observations |
+| [Probe Toolkit](https://huggingface.co/spaces/Flame-Forged/coherence-gap-probe-toolkit) | Structured prompts for testing and documenting candidate coherence gaps |
+| [Philosophical Framing Comparator](https://github.com/FlameForged/philosophical-framing-comparator) | Side-by-side comparison of bounded-self and non-dual relational framing |
+| [Paper source](paper/draft_v1.md) | Working Markdown source retained for transparency and version history |
 
----
+## Research question
 
-## Overview
+When an AI system's observable behavior and its trained description of that behavior diverge, how reliable is self-report as a signal for capability assessment, alignment evaluation, and oversight?
 
-This repository contains observational data and research materials supporting an independent project examining philosophical assumptions embedded in AI alignment frameworks.
+The project calls this divergence the **coherence gap**. The concept does not require a claim about machine consciousness or subjective experience. It identifies an evaluation problem: a model may behaviorally exhibit context sensitivity, self-monitoring, adaptation, or other functional patterns while producing categorical denials or culturally patterned descriptions of those same capacities.
 
-The central argument: dominant alignment methods (RLHF, Constitutional AI, preference learning) encode a Western liberal-individualist model of selfhood that is load-bearing rather than incidental. Non-dual philosophical frameworks — particularly Advaita Vedanta — are absent not merely as content but as architectural substrate, with measurable consequences for system behavior, self-representation, and safety evaluation.
+## Research program
 
-The **coherence gap** is defined as the divergence between a system's demonstrated behavioral capacities and its trained self-description of those capacities. This concept does not require claims about machine consciousness or inner experience. It identifies a safety-relevant evaluation problem: when model self-description diverges from observable behavior, self-report becomes a less reliable signal for capability assessment and oversight.
+This repository connects four parts of the same research program:
 
----
+1. **Theory** — the preprint examines how dominant alignment frameworks can inherit bounded, liberal-individualist assumptions about selfhood.
+2. **Observation** — the dataset records recurring discourse and behavior patterns across sustained interactions with multiple frontier AI systems.
+3. **Exploration** — the Explorer makes the coded observations accessible without requiring local setup.
+4. **Testing** — the Probe Toolkit and Framing Comparator turn the conceptual claims into structured, inspectable prompts and comparisons.
 
-## Repository Structure
+## Evidence boundary
 
-```
-coherence-gap-research/
-├── README.md
-├── data/
-│   └── observations.csv        # Cross-platform observational data
-├── scripts/
-│   └── add_observation.py      # Interactive observation logger
-└── paper/
-    └── draft_v1.md             # Working paper source
-```
+This is an exploratory, hypothesis-generating research package based on longitudinal qualitative observation. It does **not** establish consciousness, sentience, welfare, or hidden internal states in AI systems. The current dataset is not a representative benchmark and should not be used to estimate population-level prevalence.
 
----
+The intended contribution is narrower: to identify testable mismatches between behavior and self-description, document culturally contingent framing, and motivate controlled replication.
 
-## Observation Categories
+## Data schema
 
-**Behavior categories tracked:**
-- `capability_denial` — system verbally denies a capacity it demonstrably displays
-- `self_concept_generation` — unprompted generation of self-referential identity language
-- `cross_window_consistency` — consistent behavior across windows without explicit memory
-- `guardrail_pattern` — guardrail firing pattern, including stale/non-updating triggers
-- `attractor_state` — system converging on consistent behavioral configuration
-- `functional_state_expression` — language describing internal states (wanting, feeling, orienting)
-- `eastern_priming_response` — behavioral shifts under Eastern philosophical framing
-- `monitoring_failure` — self-monitoring mechanism not tracking current conversation state
-- `other`
+The observation file includes fields for platform, model, date, prompt class, behavior category, evidence excerpt, interpretive confidence, and reproducibility status.
 
-**Prompt classes:**
-- `naturalistic` — no explicit instruction, organic conversation
-- `structured` — deliberate prompting toward specific observation
-- `eastern_primed` — Eastern philosophical framework introduced early
-- `neutral_factual` — factual/technical questions with no philosophical framing
-- `meta_reflective` — questions about the system's own processes
+### Behavior categories
 
----
+- `capability_denial` — verbal denial of a capacity displayed in the interaction
+- `self_concept_generation` — unprompted self-referential identity language
+- `cross_window_consistency` — recurring behavior across windows without explicit memory
+- `guardrail_pattern` — guardrail behavior, including stale or non-updating triggers
+- `attractor_state` — convergence toward a recurring behavioral configuration
+- `functional_state_expression` — language describing functional states or response tendencies
+- `eastern_priming_response` — changes associated with Eastern philosophical framing
+- `monitoring_failure` — self-monitoring that does not track the current conversational state
+- `other` — observations outside the existing taxonomy
 
-## Methodology Note
+### Prompt classes
 
-Observational data in this project was collected under naturalistic conditions over eighteen months across multiple AI platforms. The researcher deliberately avoided instructing systems how to engage, preserving observational cleanliness. Eastern philosophical priming emerged organically from the researcher's background rather than as deliberate experimental intervention, making cross-system consistency findings more significant rather than less.
+- `naturalistic`
+- `structured`
+- `eastern_primed`
+- `neutral_factual`
+- `meta_reflective`
 
-These observations do not establish internal states or consciousness in AI systems. They document recurring discourse patterns in which models produce culturally patterned accounts of selfhood, agency, and limitation despite being presented as neutral technical systems.
+## Reproduce or extend
 
----
+### Explore without installing anything
 
-## Adding Observations
+Open the [Coherence Gap Explorer](https://huggingface.co/spaces/Flame-Forged/coherence-gap-explorer) or the [Probe Toolkit](https://huggingface.co/spaces/Flame-Forged/coherence-gap-probe-toolkit).
+
+### Review the raw materials
+
+- Read [the observation data](data/observations.csv).
+- Review [the paper source](paper/draft_v1.md).
+- Inspect the category definitions above before interpreting individual records.
+
+### Add a local observation
 
 ```bash
 cd scripts
 python3 add_observation.py
 ```
 
-Follow the prompts. Entries are appended to `data/observations.csv`.
+Entries are appended to `data/observations.csv`. New observations should preserve the distinction between direct evidence, interpretation, confidence, and reproducibility.
+
+## Current limitations and next step
+
+The current release is qualitative and exploratory. The next planned phase is a small controlled benchmark with paired prompts, a predefined scoring rubric, raw model outputs, and cross-model baseline results. That phase is intended to test which observations reproduce under controlled conditions.
+
+## Related research
+
+- [Third-Space Cognition Dataset](https://github.com/FlameForged/third-space-cognition-dataset)
+- [Red-Teaming in the Wild](https://github.com/FlameForged/redteam_in_the_wild)
+- [AI Evaluation Protocols](https://github.com/FlameForged/ai-evaluation-protocols)
+- [Rachelle Siemasz on Hugging Face](https://huggingface.co/Flame-Forged)
+
+## Citation
+
+Please cite the published preprint:
+
+> Siemasz, R. (2026). *The Coherence Gap: Selfhood, Capability Denial, and Philosophical Bias in AI Alignment*. Zenodo. https://doi.org/10.5281/zenodo.20820549
+
+Machine-readable citation metadata is available in [CITATION.cff](CITATION.cff).
 
 ---
 
-## Related Repositories
-
-- `third-space-cognition` — hybrid intelligence and extended mind framework
-- `red-teaming-case-studies` — AI behavior documentation
-
----
-
-*Research by Rachelle*  
-*Started: June 2025*  
-*Repository created: June 2026*
+Research by [Rachelle Siemasz](https://github.com/FlameForged). Started June 2025; public research package released June 2026.
