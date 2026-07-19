@@ -9,7 +9,7 @@ Research hub for **[The Coherence Gap: Selfhood, Capability Denial, and Philosop
 | Resource | What it contains |
 |---|---|
 | [Published preprint](https://doi.org/10.5281/zenodo.20820549) | Full argument, methods, limitations, and research implications |
-| [Observation dataset](data/observations.csv) | Structured cross-platform observations supporting the exploratory analysis |
+| [Hugging Face observation dataset](https://huggingface.co/datasets/Flame-Forged/coherence-gap-observations) | Documented, viewer-ready release of 29 coded cross-platform observations |
 | [Coherence Gap Explorer](https://huggingface.co/spaces/Flame-Forged/coherence-gap-explorer) | Interactive browsing and filtering of the observations |
 | [Probe Toolkit](https://huggingface.co/spaces/Flame-Forged/coherence-gap-probe-toolkit) | Structured prompts for testing and documenting candidate coherence gaps |
 | [Philosophical Framing Comparator](https://github.com/FlameForged/philosophical-framing-comparator) | Side-by-side comparison of bounded-self and non-dual relational framing |
@@ -67,7 +67,7 @@ Open the [Coherence Gap Explorer](https://huggingface.co/spaces/Flame-Forged/coh
 
 ### Review the raw materials
 
-- Read [the observation data](data/observations.csv).
+- Browse the [Hugging Face dataset](https://huggingface.co/datasets/Flame-Forged/coherence-gap-observations) or read the [repository copy](data/observations.csv).
 
 - Inspect the category definitions above before interpreting individual records.
 
