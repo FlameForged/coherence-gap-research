@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this research package, please cite the published preprint."
+title: "Coherence Gap Research: Data, Tools, and Reproducibility Materials"
+type: dataset
+authors:
+  - family-names: "Siemasz"
+    given-names: "Rachelle"
+version: 1.0.0
+date-released: 2026-06-23
+url: "https://github.com/FlameForged/coherence-gap-research"
+repository-code: "https://github.com/FlameForged/coherence-gap-research"
+abstract: "Public data, tools, and reproducibility materials supporting research on divergence between AI systems' observable behavior and trained self-description."
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Siemasz"
+      given-names: "Rachelle"
+  title: "The Coherence Gap: Selfhood, Capability Denial, and Philosophical Bias in AI Alignment"
+  year: 2026
+  doi: "10.5281/zenodo.20820549"
+  url: "https://doi.org/10.5281/zenodo.20820549"
